@@ -1,0 +1,54 @@
+/* Importa el archivo base.css, que contiene estilos globales y variables CSS que se usarán en este archivo */
+@import './base.css';
+
+/* Estilos para el contenedor principal del elemento con id #app */
+#app {
+  /* Define un ancho máximo de 1280px para el contenedor */
+  max-width: 1280px;
+  
+  /* Centra el contenedor horizontalmente */
+  margin: 0 auto;
+  
+  /* Agrega un padding de 2rem en el contenedor para separar el contenido de los bordes */
+  padding: 2rem;
+  
+  /* Aplica un peso de fuente normal para el texto dentro del contenedor */
+  font-weight: normal;
+}
+
+/* Estilos para todos los elementos de enlace (anchor) */
+a {
+  /* Elimina el subrayado predeterminado de los enlaces */
+  text-decoration: none;
+  
+  /* Define el color de los enlaces usando una variable CSS para color blanco, definida en base.css */
+  color: var(--vt-c-white);
+}
+
+/* Estilos para pantallas pequeñas (768px o menos) */
+@media (max-width: 768px) {
+  #app {
+    /* Aplica un diseño flexible para el contenedor, permitiendo ajustar los elementos dentro de él */
+    display: flex;
+    
+    /* Organiza los elementos en una sola columna */
+    flex-direction: column;
+    
+    /* Ajusta el tamaño de fuente a pequeño para optimizar la visibilidad en pantallas pequeñas */
+    font-size: small;
+  }
+}
+
+/* Estilos para pantallas grandes (1024px o más) */
+@media (min-width: 1024px) {
+  #app {
+    /* Mantiene el diseño flexible */
+    display: flex;
+    
+    /* Organiza los elementos en una columna */
+    flex-direction: column;
+    
+    /* Limita el ancho del contenedor al 80% del ancho de la pantalla para crear márgenes laterales */
+    width: 80%;
+  }
+}
